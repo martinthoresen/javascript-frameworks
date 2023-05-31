@@ -11,9 +11,6 @@ function Nav() {
         <li>
           <Link to="/products">Products</Link>
         </li>
-        <li>
-          <Link to="/cart">Shopping Cart</Link>
-        </li>
       </ul>
     </nav>
   );
