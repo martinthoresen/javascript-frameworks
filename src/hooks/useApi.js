@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 /**
  * An API Hook which makes the process of handling API calls more convenient
@@ -15,7 +15,7 @@ function useApi(url) {
         setIsLoading(true);
         setIsError(false);
         const fetchedData = await fetch(url);
-        const json = fetchedData.json();
+        const json = await fetchedData.json();
         setData(json);
       } catch (error) {
         setIsError(true);
