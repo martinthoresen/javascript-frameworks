@@ -2,7 +2,7 @@ import React from "react";
 import useApi from "../../hooks/useApi";
 import baseUrl from "../Utility/constants/baseUrl";
 import percentageSale from "../Utility/percentageSale";
-import { Container } from "react-bootstrap";
+import { Container, Card, Row, Col } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
 
 function Homepage() {
@@ -20,16 +20,18 @@ function Homepage() {
 
   return (
     <Container>
-      <card>
-        {posts.map((post) => (
-          <div key={post.id}>
-            <img src={post.imageUrl} alt={post.title}></img>
-            <h2>{post.title}</h2>
-            <p>{post.discountedPrice}</p>
-            {post.discountedPrice === post.price ? <div></div> : <div>{percentageSale(post.price, post.discountedPrice)}</div>}
-          </div>
-        ))}
-      </card>
+      <Row>
+        <Col>
+          {posts.map((post) => (
+            <Card key={post.id}>
+              <img src={post.imageUrl} alt={post.title}></img>
+              <h2>{post.title}</h2>
+              <p>{post.discountedPrice}</p>
+              {post.discountedPrice === post.price ? <div></div> : <div>{percentageSale(post.price, post.discountedPrice)}</div>}
+            </Card>
+          ))}
+        </Col>
+      </Row>
     </Container>
   );
 }
