@@ -2,9 +2,9 @@ import React from "react";
 
 function Footer() {
   return (
-    <div>
-      <p>Copyright &copy; 2023 SwiftShop</p>
-    </div>
+    <footer className=" bg-dark navbar fixed-bottom">
+      <p className="text-white">Copyright &copy; 2023 SwiftShop</p>
+    </footer>
   );
 }
 
