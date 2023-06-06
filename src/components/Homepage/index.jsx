@@ -21,16 +21,16 @@ function Homepage() {
   return (
     <Container>
       <Row>
-        <Col className="col-xl-6 m-auto">
-          {posts.map((post) => (
-            <Card key={post.id}>
-              <img src={post.imageUrl} alt={post.title}></img>
+        {posts.map((post) => (
+          <Col className="col-12 col-sm-4 col-md-3 my-1">
+            <Card key={post.id} className="p-1">
+              <img src={post.imageUrl} alt={post.title} className="card-img"></img>
               <h2>{post.title}</h2>
               <p>{post.discountedPrice}</p>
-              {post.discountedPrice === post.price ? <div></div> : <div>{percentageSale(post.price, post.discountedPrice)}</div>}
-            </Card>
-          ))}
-        </Col>
+              {post.discountedPrice === post.price ? <div></div> : <p className="text-danger">{percentageSale(post.price, post.discountedPrice)}</p>}
+            </Card>{" "}
+          </Col>
+        ))}
       </Row>
     </Container>
   );

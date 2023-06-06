@@ -8,15 +8,19 @@ import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 function Navigation() {
   return (
-    <header>
+    <header className="mb-5">
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand>SwiftShop</Navbar.Brand>
           <Nav className="me-auto">
-            <Link to="/">Home</Link>
-            <Link to="/contact">Contact Us</Link>
+            <Link className="mx-1 text-decoration-none text-light" to="/">
+              Home
+            </Link>
+            <Link className="mx-1 text-decoration-none text-light" to="/contact">
+              Contact Us
+            </Link>
           </Nav>
-          <button>
+          <button className="btn btn-dark">
             <FontAwesomeIcon icon={icon({ name: "cart-shopping" })} />
           </button>
         </Container>

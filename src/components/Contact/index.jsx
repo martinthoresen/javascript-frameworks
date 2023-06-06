@@ -26,9 +26,9 @@ function Contact() {
   }
 
   return (
-    <Container>
+    <Container className="vh-100">
       <Row>
-        <Col className="col-xl-6 m-auto">
+        <Col className=" col-6 col-xl-5 m-auto">
           <Form onSubmit={handleSubmit(onSubmit)}>
             <FormGroup>
               <Form.Label>Full Name</Form.Label>
