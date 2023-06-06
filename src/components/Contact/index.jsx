@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Container, Row } from "react-bootstrap";
+import { Form, Container, Row, Col, FormGroup, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -24,20 +24,37 @@ function Contact() {
   function onSubmit(data) {
     console.log(data);
   }
+
   return (
     <Container>
       <Row>
-        <Form onSubmit={handleSubmit(onSubmit)}>
-          <input {...register("fullName")} />
-          <p>{errors.fullName?.message}</p>
-          <input {...register("subject")} />
-          <p>{errors.subject?.message}</p>
-          <input {...register("email")} />
-          <p>{errors.email?.message}</p>
-          <input {...register("body")} />
-          <p>{errors.body?.message}</p>
-          <input type="submit" />
-        </Form>
+        <Col className="col-xl-6 m-auto">
+          <Form onSubmit={handleSubmit(onSubmit)}>
+            <FormGroup>
+              <Form.Label>Full Name</Form.Label>
+              <Form.Control {...register("fullName")} placeholder="Ola Nordmann" />
+              <p>{errors.fullName?.message}</p>
+            </FormGroup>
+            <FormGroup>
+              <Form.Label>Subject</Form.Label>
+              <Form.Control {...register("subject")} />
+              <p>{errors.subject?.message}</p>
+            </FormGroup>
+            <FormGroup>
+              <Form.Label>Email</Form.Label>
+              <Form.Control {...register("email")} />
+              <p>{errors.email?.message}</p>
+            </FormGroup>
+            <FormGroup>
+              <Form.Label>Message</Form.Label>
+              <Form.Control as="textarea" {...register("body")} />
+              <p>{errors.body?.message}</p>
+            </FormGroup>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
+        </Col>
       </Row>
     </Container>
   );

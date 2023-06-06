@@ -21,7 +21,7 @@ function Homepage() {
   return (
     <Container>
       <Row>
-        <Col>
+        <Col className="col-xl-6 m-auto">
           {posts.map((post) => (
             <Card key={post.id}>
               <img src={post.imageUrl} alt={post.title}></img>
