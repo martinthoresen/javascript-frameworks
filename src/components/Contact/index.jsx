@@ -26,7 +26,7 @@ function Contact() {
   }
 
   return (
-    <Container className="vh-100">
+    <Container>
       <Row>
         <Col className=" col-6 col-xl-5 m-auto">
           <Form onSubmit={handleSubmit(onSubmit)}>
