@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useApi from "../../hooks/useApi";
 import baseUrl from "../Utility/constants/baseUrl";
 import percentageSale from "../Utility/percentageSale";
-import { Container, Card, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
 
 function Homepage() {
@@ -21,17 +21,18 @@ function Homepage() {
 
   return (
     <Container>
+      <h1 className="text-center">Products</h1>
       <Row>
         {posts.map((post) => (
           <Col className="col-12 col-sm-4 col-md-3 my-1">
-            <Card key={post.id} className="p-1">
+            <div key={post.id} className="p-1">
               <Link to={"/product/" + post.id} className="text-decoration-none text-dark">
-                <img src={post.imageUrl} alt={post.title} className="card-img"></img>
+                <img src={post.imageUrl} alt={post.title} className="product-image"></img>
                 <h2>{post.title}</h2>
                 <p>$ {post.discountedPrice}</p>
                 {post.discountedPrice === post.price ? <div></div> : <p className="text-danger">{percentageSale(post.price, post.discountedPrice)}</p>}
               </Link>
-            </Card>
+            </div>
           </Col>
         ))}
       </Row>

@@ -27,6 +27,7 @@ function Contact() {
 
   return (
     <Container>
+      <h1 className="text-center">Contact Us</h1>
       <Row>
         <Col className=" col-6 col-xl-5 m-auto">
           <Form onSubmit={handleSubmit(onSubmit)}>
