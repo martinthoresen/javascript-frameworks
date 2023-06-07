@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
+import ShoppingCartIcon from "./ShoppingCartIcon";
 
 function Navigation() {
   return (
@@ -20,9 +19,7 @@ function Navigation() {
               Contact Us
             </Link>
           </Nav>
-          <Link to="/cart" className="btn btn-dark">
-            <FontAwesomeIcon icon={icon({ name: "cart-shopping" })} />
-          </Link>
+          <ShoppingCartIcon />
         </Container>
       </Navbar>
     </header>
