@@ -6,6 +6,7 @@ import Contact from "./components/Contact";
 import ShoppingCart from "./components/ShoppingCart";
 import Product from "./components/Product";
 import RouteNotFound from "./components/RouteNotFound";
+import "./App.css";
 
 function App() {
   return (
