@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import useApi from "../../hooks/useApi";
 import baseUrl from "../Utility/constants/baseUrl";
 import percentageSale from "../Utility/percentageSale";
@@ -23,12 +24,14 @@ function Homepage() {
       <Row>
         {posts.map((post) => (
           <Col className="col-12 col-sm-4 col-md-3 my-1">
-            <Card key={post.id} className="p-1">
-              <img src={post.imageUrl} alt={post.title} className="card-img"></img>
-              <h2>{post.title}</h2>
-              <p>{post.discountedPrice}</p>
-              {post.discountedPrice === post.price ? <div></div> : <p className="text-danger">{percentageSale(post.price, post.discountedPrice)}</p>}
-            </Card>{" "}
+            <Link to="/ShoppingCart" className="text-decoration-none">
+              <Card key={post.id} className="p-1">
+                <img src={post.imageUrl} alt={post.title} className="card-img"></img>
+                <h2>{post.title}</h2>
+                <p>{post.discountedPrice}</p>
+                {post.discountedPrice === post.price ? <div></div> : <p className="text-danger">{percentageSale(post.price, post.discountedPrice)}</p>}
+              </Card>
+            </Link>
           </Col>
         ))}
       </Row>

@@ -20,9 +20,9 @@ function Navigation() {
               Contact Us
             </Link>
           </Nav>
-          <button className="btn btn-dark">
+          <Link to="/cart" className="btn btn-dark">
             <FontAwesomeIcon icon={icon({ name: "cart-shopping" })} />
-          </button>
+          </Link>
         </Container>
       </Navbar>
     </header>
