@@ -34,32 +34,32 @@ function Contact() {
     <Container>
       <h1 className="text-center">Contact Us</h1>
       <Row>
-        <Col className=" col-6 col-xl-5 m-auto">
+        <Col className=" col-11 col-xl-5 m-auto">
           <Form onSubmit={handleSubmit(onSubmit)}>
             <FormGroup>
               <Form.Label>Full Name</Form.Label>
               <Form.Control {...register("fullName")} placeholder="Ola Nordmann" />
-              <p>{errors.fullName?.message}</p>
+              <p className="text-danger">{errors.fullName?.message}</p>
             </FormGroup>
             <FormGroup>
               <Form.Label>Subject</Form.Label>
               <Form.Control {...register("subject")} />
-              <p>{errors.subject?.message}</p>
+              <p className="text-danger">{errors.subject?.message}</p>
             </FormGroup>
             <FormGroup>
               <Form.Label>Email</Form.Label>
               <Form.Control {...register("email")} />
-              <p>{errors.email?.message}</p>
+              <p className="text-danger">{errors.email?.message}</p>
             </FormGroup>
             <FormGroup>
               <Form.Label>Message</Form.Label>
               <Form.Control as="textarea" {...register("body")} />
-              <p>{errors.body?.message}</p>
+              <p className="text-danger">{errors.body?.message}</p>
             </FormGroup>
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" className="d-block w-100">
               Submit
             </Button>
-            <p>{formSubmitted}</p>
+            <p className="text-success text-center">{formSubmitted}</p>
           </Form>
         </Col>
       </Row>
