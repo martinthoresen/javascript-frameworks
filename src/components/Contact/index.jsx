@@ -28,6 +28,7 @@ function Contact() {
   };
   function onSubmit(data) {
     handleFormSubmitted();
+    console.log(data);
   }
 
   return (
