@@ -3,12 +3,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart, decrementQuantity, incrementQuantity, removeFromCart } from "../Utility/cartSlice";
 import percentageSale from "../Utility/percentageSale";
 import { Button, Form, FormCheck } from "react-bootstrap";
+import cartTotal from "../Utility/cartTotal";
 
 function ShoppingCart() {
   const cart = useSelector((state) => state.cart);
-  console.log(cart);
   const dispatch = useDispatch();
-  console.log(cart.cart.length);
   return cart.cart.length === 0 ? (
     <div>
       <h1 className="text-center">Your Cart</h1>
@@ -45,6 +44,8 @@ function ShoppingCart() {
           </Form>
         </div>
       ))}
+
+      <h2>Total: {cartTotal(cart.cart)}</h2>
     </div>
   );
 }
