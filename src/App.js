@@ -7,6 +7,7 @@ import ShoppingCart from "./components/ShoppingCart";
 import Product from "./components/Product";
 import RouteNotFound from "./components/RouteNotFound";
 import "./App.css";
+import CheckoutSuccess from "./components/CheckoutSuccess";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<ShoppingCart />} />
-          <Route path="product/:id" element={<Product />} />
+          <Route path="/product/:id" element={<Product />} />
+          <Route path="/checkout" element={<CheckoutSuccess />} />
           <Route path="*" element={<RouteNotFound />} />
         </Route>
       </Routes>

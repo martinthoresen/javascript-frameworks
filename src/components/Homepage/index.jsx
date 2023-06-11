@@ -9,7 +9,6 @@ import Spinner from "react-bootstrap/Spinner";
 function Homepage() {
   const { data, isLoading, isError } = useApi(baseUrl + "/online-shop");
   const items = data;
-  console.log(data);
 
   if (isLoading) {
     return <Spinner animation="grow" />;
@@ -21,7 +20,7 @@ function Homepage() {
 
   return (
     <Container>
-      <h1 className="text-center">Products</h1>
+      <h1 className="text-center mb-5">Products</h1>
       <Row>
         {items.map((item) => (
           <Col className="col-12 col-sm-4 col-md-3 my-1">
@@ -30,7 +29,7 @@ function Homepage() {
                 <img src={item.imageUrl} alt={item.title} className="product-image"></img>
                 <h2>{item.title}</h2>
                 <div className="d-flex justify-content-between">
-                  <p>$ {item.discountedPrice}</p>
+                  <p>${item.discountedPrice}</p>
                   {item.discountedPrice === item.price ? <div></div> : <p className="text-danger">{percentageSale(item.price, item.discountedPrice)}</p>}
                 </div>
                 <p className="text-secondary text-decoration-underline">View Product</p>

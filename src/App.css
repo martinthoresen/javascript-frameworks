@@ -3,3 +3,9 @@
   height: 20em;
   width: 100%;
 }
+
+.cart-image {
+  object-fit: cover;
+  width: 10em;
+  height: 100%;
+}

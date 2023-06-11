@@ -34,7 +34,7 @@ function Product() {
             <img src={item.imageUrl} alt={item.title} className="card-img"></img>
             <div>
               <h1>{item.title}</h1>
-              <p>$ {item.discountedPrice}</p>
+              <p>${item.discountedPrice}</p>
               {item.discountedPrice === item.price ? <div></div> : <p className="text-danger">{percentageSale(item.price, item.discountedPrice)}</p>}
               <p>{item.description}</p>
               <Button
