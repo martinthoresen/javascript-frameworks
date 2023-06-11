@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Container, Row, Col, FormGroup, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -21,8 +21,13 @@ function Contact() {
   } = useForm({
     resolver: yupResolver(schema),
   });
+
+  const [formSubmitted, setFormSubmitted] = useState("");
+  const handleFormSubmitted = () => {
+    setFormSubmitted("Success! We will reach out to you as soon as possible.");
+  };
   function onSubmit(data) {
-    console.log(data);
+    handleFormSubmitted();
   }
 
   return (
@@ -54,6 +59,7 @@ function Contact() {
             <Button variant="primary" type="submit">
               Submit
             </Button>
+            <p>{formSubmitted}</p>
           </Form>
         </Col>
       </Row>

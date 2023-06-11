@@ -36,6 +36,7 @@ function Product() {
               <h1>{item.title}</h1>
               <p>$ {item.discountedPrice}</p>
               {item.discountedPrice === item.price ? <div></div> : <p className="text-danger">{percentageSale(item.price, item.discountedPrice)}</p>}
+              <p>{item.description}</p>
               <Button
                 onClick={() => {
                   dispatch(addToCart(item));

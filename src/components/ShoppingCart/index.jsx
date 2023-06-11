@@ -8,7 +8,15 @@ function ShoppingCart() {
   const cart = useSelector((state) => state.cart);
   console.log(cart);
   const dispatch = useDispatch();
-  return cart.value === 0 ? (
+  console.log(cart.cart.length);
+  return cart.cart.length === 0 ? (
+    <div>
+      <h1 className="text-center">Your Cart</h1>
+      <p className="text-center m-5">
+        You have no items in your cart. <a href="/">Browse products...</a>
+      </p>
+    </div>
+  ) : (
     <div>
       <h1 className="text-center">Your Cart</h1>
       {cart.cart.map((cartItem) => (
@@ -37,13 +45,6 @@ function ShoppingCart() {
           </Form>
         </div>
       ))}
-    </div>
-  ) : (
-    <div>
-      <h1 className="text-center">Your Cart</h1>
-      <p className="text-center m-5">
-        You have no items in your cart. <a href="/">Browse products...</a>
-      </p>
     </div>
   );
 }
