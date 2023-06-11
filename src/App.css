@@ -9,3 +9,9 @@
   width: 10em;
   height: 100%;
 }
+
+.product-page-image {
+  object-fit: cover;
+  height: 25em;
+  width: 100%;
+}

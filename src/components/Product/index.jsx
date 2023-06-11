@@ -30,9 +30,9 @@ function Product() {
     <div>
       <Col>
         <Row className="col-11 col-sm-8 col-lg-5 m-auto">
-          <div key={item.id} className=" d-flex flex-column align-items-center flex-md-row justify-content-center">
-            <img src={item.imageUrl} alt={item.title} className="card-img"></img>
-            <div>
+          <div key={item.id} className=" d-flex flex-column align-items-center flex-md-row justify-content-center ">
+            <img src={item.imageUrl} alt={item.title} className="product-page-image mx-2"></img>
+            <div className="d-flex flex-column mx-2 text-right">
               <h1>{item.title}</h1>
               <p>${item.discountedPrice}</p>
               {item.discountedPrice === item.price ? <div></div> : <p className="text-danger">{percentageSale(item.price, item.discountedPrice)}</p>}
