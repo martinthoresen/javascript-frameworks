@@ -8,6 +8,10 @@ This is a project used for the JavaScript Frameworks CA in the second year at No
 
 In the project directory, you can run:
 
+### `npm i`
+
+Installs the dependencies needed for the project to run
+
 ### `npm start`
 
 Runs the app in the development mode.\
