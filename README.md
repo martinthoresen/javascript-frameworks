@@ -1,40 +1,57 @@
 # SwiftShop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is a project used for the JavaScript Frameworks CA in the second year at Noroff.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Description
 
-### `npm i`
+SwiftShop is a basic webshop site demonstrating the technques we learned in the Javascript Frameworks course at Noroff.
 
-Installs the dependencies needed for the project to run
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Built With
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Languages
+- ```HTML```
+- ```CSS```
+- ```JavaScript```
+- ### Frameworks
+- ```Bootstrap 5```
+- ```React.js```
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repo:
 
-### `npm run eject`
+```bash
+git clone git@github.com:martinthoresen/javascript-frameworks.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install the dependencies:
+
+```bash
+- npm i
+```
+
+### Running
+
+
+```bash
+- npm run build
+- npm run watch
+```
+
+## Contributing
+
+If you wanna contribute to the project, make sure to open a PR so it can get reviewed.
+
+## Contact
+
+[Mail](mailto:martin2resen@gmail.com)
+
+[LinkedIn](https://www.linkedin.com/in/martinthoresen/)
